@@ -92,32 +92,6 @@ Variable VAR_parse(Common common, char firstChar) {
 				v->type = integer;
 				v->intVal = intPart;
 			}
-			// c = firstChar;
-			// // parse the integer part
-			// do {
-			// 	val *= 10;
-			// 	val += c - '0';
-			// 	c = DS_readChar(common->string, common->file, false);
-			// } while(c <= '9' && c >= '0');
-
-			// // if present, parse the decimal part
-			// if(c == '.') {
-			// 	c = DS_readChar(common->string, common->file, false);
-
-			// 	if(c <= '9' && c >= '0') do {
-			// 			tmp = c - '0';
-			// 			for(int i = 0; i < floatConverter; i++) tmp /= 10;
-			// 			val += tmp;
-			// 			floatConverter += 1;
-			// 			c = DS_readChar(common->string, common->file, false);
-			// 		} while(c <= '9' && c >= '0');
-
-			// 	v->type = floating;
-			// 	v->floatVal = val;
-			// } else {
-			// 	v->type = integer;
-			// 	v->intVal = intPart;
-			// }
 	}
 
 	fseek(common->file, -1, SEEK_CUR);
