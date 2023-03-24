@@ -6,4 +6,4 @@
 
 ## Values
 
--   string constants
+-   string, integer, float constants
